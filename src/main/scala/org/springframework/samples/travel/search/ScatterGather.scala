@@ -3,6 +3,11 @@ package search
 
 import akka.actor.{Actor, ActorRef, Props, ReceiveTimeout}
 import akka.util.duration._
+import org.springframework.samples.travel.search.HotelResponse
+import org.springframework.samples.travel.search.HotelQuery
+import akka.actor.actorRef2Scala
+import org.springframework.samples.travel.Hotel
+import org.springframework.samples.travel.search.SingleActorSearch
 
 /** The "head" actor for splitting data by country.
  * 

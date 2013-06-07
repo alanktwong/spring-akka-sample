@@ -2,6 +2,9 @@ package org.springframework.samples.travel
 package search
 
 import akka.actor.{Actor, ActorRef, Props}
+import org.springframework.samples.travel.search.HotelResponse
+import org.springframework.samples.travel.search.HotelQuery
+import akka.actor.actorRef2Scala
 
 /** This message is passed from the query interceptor -> query cache. */
 case class UpdateQueryCache(query: String, response: HotelResponse)

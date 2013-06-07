@@ -1,7 +1,8 @@
 package org.springframework.samples.travel
 package search
 
-import akka.actor.ActorRef
+import org.springframework.samples.travel.Hotel
+import org.springframework.samples.travel.SearchCriteria
 
 sealed trait SearchMessages
 
