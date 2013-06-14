@@ -2,28 +2,18 @@ package org.springframework.samples.travel
 package search
 
 import org.springframework.stereotype.Service
-import javax.inject.Singleton
-import javax.persistence.EntityManager
+import javax.inject.{Inject,Singleton}
+import javax.persistence.{EntityManager, PersistenceContext}
 import akka.actor._
 import scala.collection.JavaConverters._
 import javax.annotation.PostConstruct
+import akka.pattern.ask
 import akka.dispatch.Await
 import javax.annotation.PreDestroy
+import akka.routing.RoundRobinRouter
 import collection.JavaConverters._
 import akka.util.Timeout
 import akka.util.duration._
-import javax.annotation.PostConstruct
-import javax.annotation.PreDestroy
-import javax.injectimport org.springframework.samples.travel.search.HotelResponse
-import org.springframework.samples.travel.search.HotelQuery
-import org.springframework.samples.travel.search.QueryCacheActor
-import org.springframework.samples.travel.search.FailWhaleActor
-import org.springframework.samples.travel.search.CountryCategoryActor
-.Singleton
-import org.springframework.samples.travel.Hotel
-import org.springframework.samples.travel.SearchCriteria
-import org.springframework.samples.travel.SearchService
-import org.springframework.stereotype.Service
 
 @Service
 @Singleton
