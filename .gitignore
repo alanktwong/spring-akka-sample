@@ -9,3 +9,5 @@
 .settings/org.eclipse.wst.jsdt.ui.superType.container
 .settings/org.eclipse.wst.jsdt.ui.superType.name
 .settings/org.scala-ide.sdt.core.prefs
+.settings
+pom.properties

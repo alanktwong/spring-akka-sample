@@ -14,15 +14,15 @@
 		<org.springsecurity-version>3.0.5.RELEASE</org.springsecurity-version>
 		<org.aspectj-version>1.6.9</org.aspectj-version>
 		<org.slf4j-version>1.6.1</org.slf4j-version>
-    <com.typesafe.akka-version>2.0.3</com.typesafe.akka-version>
+		<com.typesafe.akka-version>2.0.3</com.typesafe.akka-version>
 	</properties>
-	<dependencies>	
-    <!-- Akka -->
-    <dependency>
-      <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-actor</artifactId>
-      <version>${com.typesafe.akka-version}</version>
-    </dependency>
+	<dependencies>
+		<!-- Akka -->
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-actor</artifactId>
+			<version>${com.typesafe.akka-version}</version>
+		</dependency>
 
 		<!-- Spring -->
 		<dependency>
@@ -41,7 +41,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework-version}</version>
-		</dependency>				
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
@@ -72,7 +72,7 @@
 					<groupId>commons-logging</groupId>
 					<artifactId>commons-logging</artifactId>
 				 </exclusion>
-			</exclusions>						
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
@@ -89,8 +89,8 @@
 					<groupId>commons-logging</groupId>
 					<artifactId>commons-logging</artifactId>
 				 </exclusion>
-			</exclusions>						
-        </dependency>
+			</exclusions>
+		</dependency>
 		<!-- ROO dependencies -->
 		<dependency>
 			<groupId>org.springframework.roo</groupId>
@@ -104,7 +104,7 @@
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
 			<version>${org.aspectj-version}</version>
-		</dependency>	
+		</dependency>
 		
 		<!-- Logging -->
 		<dependency>
@@ -175,7 +175,7 @@
 					<groupId>commons-logging</groupId>
 					<artifactId>commons-logging-api</artifactId>
 				 </exclusion>
-			</exclusions>			
+			</exclusions>
 		</dependency>
 				
 		<!-- Hibernate JPA 2 Provider -->
@@ -208,7 +208,7 @@
 			<artifactId>joda-time-jsptags</artifactId>
 			<version>1.0.2</version>
 			<scope>runtime</scope>
-		</dependency>		
+		</dependency>
 
 		<!-- Test -->
 		<dependency>
@@ -248,25 +248,25 @@
 			<snapshots><enabled>true</enabled></snapshots>
 		</repository>
 		<!-- For developing against latest Spring milestones -->
-        <repository>
+		<repository>
 			<id>org.springframework.maven.milestone</id>
 			<name>Spring Maven Milestone Repository</name>
 			<url>http://maven.springframework.org/milestone</url>
 			<snapshots><enabled>false</enabled></snapshots>
 		</repository>
 		<!-- For Roo -->
-        <repository>
-            <id>spring-roo-repository</id>
-            <name>Spring Roo Repository</name>
-            <url>http://spring-roo-repository.springsource.org/release</url>
-        </repository>           
-        <!-- For Hibernate -->
+		<repository>
+			<id>spring-roo-repository</id>
+			<name>Spring Roo Repository</name>
+			<url>http://spring-roo-repository.springsource.org/release</url>
+		</repository>
+		<!-- For Hibernate -->
 		<repository>
 			<id>org.jboss.repository.releases</id>
-			<name>JBoss Maven Release Repository</name>                     
+			<name>JBoss Maven Release Repository</name>
 			<url>https://repository.jboss.org/nexus/content/repositories/releases</url>
 			<snapshots><enabled>false</enabled></snapshots>
-		</repository>		
+		</repository>
 	</repositories>
 	<build>
 		<plugins>
@@ -344,62 +344,62 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>tomcat-maven-plugin</artifactId>
 				<version>1.0-beta-1</version>
-			</plugin>	
-      <plugin>
-        <groupId>org.mortbay.jetty</groupId>
-        <artifactId>maven-jetty-plugin</artifactId>
-        <version>6.1.10</version>
-        <configuration>
-                <scanIntervalSeconds>10</scanIntervalSeconds>
-                <stopKey>foo</stopKey>
-                <stopPort>9999</stopPort>
-        </configuration>
-        <executions>
-                <execution>
-                        <id>start-jetty</id>
-                        <phase>pre-integration-test</phase>
-                        <goals>
-                                <goal>run</goal>
-                        </goals>
-                        <configuration>
-                                <scanIntervalSeconds>0</scanIntervalSeconds>
-                                <daemon>true</daemon>
-                        </configuration>
-                </execution>
-                <execution>
-                        <id>stop-jetty</id>
-                        <phase>post-integration-test</phase>
-                        <goals>
-                                <goal>stop</goal>
-                        </goals>
-                </execution>
-        </executions>
-      </plugin>				
-      <plugin>
-        <groupId>net.alchim31.maven</groupId>
-          <artifactId>scala-maven-plugin</artifactId>
-          <version>3.1.0</version>
-          <configuration>
-            <recompileMode>incremental</recompileMode>
-          </configuration>
-          <executions>
-					  <execution>
-						  <id>scala-compile-first</id>
-   						<phase>process-resources</phase>
-  						<goals>
-  						    <goal>add-source</goal>
-  							<goal>compile</goal>
-  						</goals>
-  					</execution>
-  					<execution>
-  						<id>scala-test-compile</id>
-  						<phase>process-test-resources</phase>
-  						<goals>
-  							<goal>testCompile</goal>
-  						</goals>
-  					</execution>
+			</plugin>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.1.10</version>
+				<configuration>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<stopKey>foo</stopKey>
+					<stopPort>9999</stopPort>
+				</configuration>
+				<executions>
+					<execution>
+						<id>start-jetty</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<scanIntervalSeconds>0</scanIntervalSeconds>
+							<daemon>true</daemon>
+						</configuration>
+					</execution>
+					<execution>
+						<id>stop-jetty</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>stop</goal>
+						</goals>
+					</execution>
 				</executions>
-      </plugin>	
+			</plugin>
+			<plugin>
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>scala-maven-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<recompileMode>incremental</recompileMode>
+				</configuration>
+				<executions>
+					<execution>
+						<id>scala-compile-first</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>add-source</goal>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>scala-test-compile</id>
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>testCompile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>
