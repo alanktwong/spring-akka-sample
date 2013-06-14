@@ -11,3 +11,4 @@
 .settings/org.scala-ide.sdt.core.prefs
 .settings
 pom.properties
+target/
