@@ -12,3 +12,8 @@ However, some work is still in progress as listed below.
 * JSR303 support is not yet integrated
 * JPABookingService findHotels(SearchCriteria criteria) is currently vulnerable to HQL injection
 * Use of <persistence-context/> in the hotels/booking flow should be removed in favor of detached objects
+
+## More about this project
+
+* [Josh Suereth's Repo](https://github.com/jsuereth/spring-akka-sample)
+* [Spring Travel App](https://github.com/cloudfoundry-samples/spring-travel)
